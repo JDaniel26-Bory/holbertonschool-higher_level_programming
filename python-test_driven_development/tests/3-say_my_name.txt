@@ -26,6 +26,13 @@ Should print just the first name and last name with the format:
     >>> say_my_name("Sean", '3.67')
     My name is Sean 3.67
 
+Should print just the first, middle name and last name with the format:
+    >>> say_my_name("Juan Daniel", "Watson")
+    My name is Juan Daniel Watson
+
+Should print just the first name 3 times, and last name with the format:
+    >>> say_my_name(5 * "Jhonny ", "Colt")
+    My name is Jhonny Jhonny Jhonny Jhonny Jhonny  Colt
 
 Should raise an exception TypeError first_name argument missing:
     >>> say_my_name()
