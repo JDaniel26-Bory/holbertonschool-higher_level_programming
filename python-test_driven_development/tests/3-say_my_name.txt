@@ -1,0 +1,40 @@
+======================
+2. Print a complete name
+======================
+Function
+========
+Function to print a complete name, conformed by first name (first_name) and last name (last_name)
+the function arguments must be strings, otherwise rise a TypeError for each one.
+The print will have the next format: My name is <first name> <last name>.
+
+Import module:
+-------------
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Tests:
+-----
+
+Should print the name with the format:
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Should print just the first and middle name togheter and last name with the format:
+    >>> say_my_name("Elijah" "Black", "Mallon")
+    My name is ElijahBlack Mallon
+
+Should print just the first name and last name with the format:
+    >>> say_my_name("Sean", '3.67')
+    My name is Sean 3.67
+
+
+Should raise an exception TypeError first_name argument missing:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Should raise an exception TypeError for more than 2 arguments must be string:
+    >>> say_my_name("Sara", "Lara", "Swan", "Trenat")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 4 were given
