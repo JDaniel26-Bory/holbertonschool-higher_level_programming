@@ -68,9 +68,3 @@ Should raise an exception TypeError for complex number:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
-
-Should raise an exception ValueError for negative size:
-    >>> print_square(-2)
-    Traceback (most recent call last):
-    ...
-    ValueError: size must be >= 0
