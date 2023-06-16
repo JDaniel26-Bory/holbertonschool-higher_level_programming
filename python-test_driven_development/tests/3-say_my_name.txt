@@ -34,6 +34,22 @@ Should print just the first name 3 times, and last name with the format:
     >>> say_my_name(5 * "Jhonny ", "Colt")
     My name is Jhonny Jhonny Jhonny Jhonny Jhonny  Colt
 
+Should print just the the format:
+    >>> say_my_name("")
+    My name is  
+
+Should raise an exception TypeError first_name must be string:
+    >>> say_my_name(None, "Novack")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Should raise an exception TypeError last_name must be string:
+    >>> say_my_name("Peter", 127)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
 Should raise an exception TypeError first_name argument missing:
     >>> say_my_name()
     Traceback (most recent call last):
