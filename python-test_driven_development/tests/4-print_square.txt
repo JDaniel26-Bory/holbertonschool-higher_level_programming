@@ -68,3 +68,9 @@ Should raise an exception TypeError for complex number:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
+
+Empty
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
