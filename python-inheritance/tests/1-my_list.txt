@@ -9,7 +9,7 @@ Import module:
     -------------
     >>> MyList = __import__('1-my_list').MyList
 
-Create a new instance of BaseGeometry class:
+    Create a new instance of BaseGeometry class:
     >>> list_l = MyList()
 
     Print an the empty method:
@@ -19,7 +19,7 @@ Create a new instance of BaseGeometry class:
     >>> print(list_l)
     []
 
-Append elements to the list and print them:
+    Append elements to the list and print them:
     >>> list_l.append(5)
     >>> list_l.append(26)
     >>> list_l.append(38)
@@ -40,3 +40,8 @@ Append elements to the list and print them:
     [3, 26, 38, 15, -1, -2, -3]
     >>> list_l.print_sorted()
     [-1, -2, -3, 3, 15, 26, 38]
+
+    Clear the instance for an empty list:
+    >>> list_l.clear()
+    >>> list_l
+    []
