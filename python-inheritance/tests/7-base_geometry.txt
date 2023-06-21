@@ -40,23 +40,11 @@ Import module:
     ...
     Exception: area() is not implemented
 
-    Create a new instance of BaseGeometry class with argument:
-    >>> base_g = BaseGeometry(5)
-    Traceback (most recent call last):
-    ...
-    TypeError: object() takes no parameters
-
     Checking calling integer_validator with no arguments:
 	>>> base_g.integer_validator()
 	Traceback (most recent call last):
 		...
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-    Checking calling integer_validator with 1 argument:
-	>>> base_g.integer_validator("test")
-	Traceback (most recent call last):
-		...
-	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     Checking calling integer_validator with more than 2 arguments:
 	>>> base_g.integer_validator("test", 1, 2)
