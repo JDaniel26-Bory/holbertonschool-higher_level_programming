@@ -55,7 +55,7 @@ Import module:
     Should raise ValueError:
     >>> base_g.integer_validator("age", True)
     ...
-    ValueError: True must be an integer
+    TypeError: age must be an integer
 
     Should raise Exception:
     >>> base_g.area()
