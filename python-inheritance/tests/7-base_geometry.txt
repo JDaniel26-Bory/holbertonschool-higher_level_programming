@@ -7,7 +7,7 @@ Class BaseGeometry with an area method that raises an error and and integer_vali
 to validate the entry argumnet of value.
 
 Import module:
---------------
+    -------------
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
     Create a new instance of BaseGeometry class:
@@ -39,6 +39,12 @@ Import module:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+    Create a new instance of BaseGeometry class with argument:
+    >>> base_g = BaseGeometry(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: object() takes no parameters
 
     Checking calling integer_validator with no arguments:
 	>>> base_g.integer_validator()
