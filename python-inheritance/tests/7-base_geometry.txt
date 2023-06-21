@@ -34,11 +34,11 @@ Import module:
     ...
     ValueError: Peter must be greater than 0
 
-    Should raise ValueError:
+    Should raise TypeError:
     >>> base_g.integer_validator("age", "4")
     Traceback (most recent call last):
     ...
-    TypeError: "4" must be an integer
+    TypeError: age must be an integer
 
     Should raise Exception:
     >>> base_g.area()
