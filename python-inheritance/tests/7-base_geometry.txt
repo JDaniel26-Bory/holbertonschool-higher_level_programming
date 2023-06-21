@@ -58,6 +58,11 @@ Import module:
     ...
     TypeError: age must be an integer
 
+    Should raise TypeError:
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
     Should raise Exception:
     >>> base_g.area()
     Traceback (most recent call last):
