@@ -34,6 +34,16 @@ Import module:
     ...
     ValueError: Peter must be greater than 0
 
+    Should raise ValueError:
+    >>> bg.integer_validator("Mclovin", {1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: Mclovin must be an integer
+
+    Should raise ValueError:
+	>>> bg.integer_validator("Mclovin", (1, 2, 3))
+	Traceback (most recent call last):
+	TypeError: Mclovin must be an integer
+
     Should raise Exception:
     >>> base_g.area()
     Traceback (most recent call last):
