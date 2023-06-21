@@ -18,7 +18,13 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
+"""Rectangle Class"""
+
+
 class Rectangle(BaseGeometry):
+    """width and height must be private.
+width and height must be positive integers, validated by integer_validator"""
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
