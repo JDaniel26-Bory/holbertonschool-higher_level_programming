@@ -13,9 +13,6 @@ Import module:
     Create a new instance of BaseGeometry class:
     >>> base_g = BaseGeometry()
 
-     Create a new instance of BaseGeometry class:
-    >>> base_g = BaseGeometry()
-
     Should execute succesfully:
     >>> base_g.integer_validator("Claire", 23)
 
