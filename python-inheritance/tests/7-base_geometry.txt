@@ -7,10 +7,13 @@ Class BaseGeometry with an area method that raises an error and and integer_vali
 to validate the entry argumnet of value.
 
 Import module:
-    -------------
+--------------
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
     Create a new instance of BaseGeometry class:
+    >>> base_g = BaseGeometry()
+
+     Create a new instance of BaseGeometry class:
     >>> base_g = BaseGeometry()
 
     Should execute succesfully:
