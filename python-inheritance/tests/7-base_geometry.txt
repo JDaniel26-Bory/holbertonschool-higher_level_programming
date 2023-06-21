@@ -39,3 +39,9 @@ Import module:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+    Checking calling integer_validator with more than 2 arguments:
+	>>> base_g.integer_validator("test", 1, 2)
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
