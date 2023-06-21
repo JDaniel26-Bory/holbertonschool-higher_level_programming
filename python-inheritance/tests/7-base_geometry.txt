@@ -40,8 +40,14 @@ Import module:
     ...
     TypeError: age must be an integer
 
-    Should raise error:
+    Should raise TypeError:
     >>> base_g.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    Should Raise TypeError:
+    >>> base_g.integer_validator("age", [3])
     Traceback (most recent call last):
     ...
     TypeError: age must be an integer
