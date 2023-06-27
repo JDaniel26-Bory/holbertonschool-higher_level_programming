@@ -34,26 +34,22 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    width.setter
-
-    """Set the value in private instance attribute"""
+    @width.setter
     def width(self, value):
+        """Set the value in private instance attribute"""
         self.__width = value
 
-    height.setter
-
-    """Set the value in private instance attribute"""
+    @height.setter
     def height(self, value):
+        """Set the value in private instance attribute"""
         self.__height = value
 
-    x.setter
-
+    @x.setter
     def x(self, value):
         """Set the value in private instance attribute"""
         self.__x = value
 
-    y.setter
-
-    """Set the value in private instance attribute"""
+    @y.setter
     def y(self, value):
+        """Set the value in private instance attribute"""
         self.__y = value
