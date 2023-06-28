@@ -3,7 +3,6 @@
 """
 
 
-
 import unittest
 from models.base import Base
 
@@ -16,7 +15,7 @@ class TestBase(unittest.TestCase):
         obj1 = Base()
         self.assertEqual(obj1.id, 1)
 
-        # Requirement 2: Base() for assigning automatically an ID + 1 of the previous
+        # Requirement 2: Base() for assigning automatically an ID
         obj2 = Base()
         self.assertEqual(obj2.id, 2)
 
@@ -24,6 +23,7 @@ class TestBase(unittest.TestCase):
         # Requirement 3: Base(89) saving the ID passed
         obj3 = Base(89)
         self.assertEqual(obj3.id, 89)
+
 
 if __name__ == '__main__':
     unittest.main()
