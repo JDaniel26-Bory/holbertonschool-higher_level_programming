@@ -91,11 +91,11 @@ class Rectangle(Base):
         num_args = len(args)
         if num_args > 0:
             self.id = args[0]
-        elif num_args > 1:
-            self.height = args[1]
-        elif num_args > 2:
-            self.width = args[2]
-        elif num_args > 3:
+        if num_args > 1:
+            self.width = args[1]
+        if num_args > 2:
+            self.height = args[2]
+        if num_args > 3:
             self.x = args[3]
-        elif num_args > 4:
-            self.y = [4]
+        if num_args > 4:
+            self.y = args[4]
