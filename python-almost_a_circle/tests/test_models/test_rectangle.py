@@ -42,13 +42,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = Rectangle("1", 2)
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, "2")
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 2, "3")
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 2, 3, "4")
         
         with self.assertRaises(ValueError):
