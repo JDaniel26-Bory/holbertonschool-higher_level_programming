@@ -11,28 +11,19 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """Test cases for Base class
     """
-    def setUp(self):
-        """assigning automatically an ID + 1 of the previous"""
-        Base._Base__nb_objects = 0
+    def test_assigning_id(self):
+        # Requirement 1: Base() for assigning automatically an ID
+        obj1 = Base()
+        self.assertEqual(obj1.id, 1)
 
-    def test_A_ID_value(self):
-        """tests for class base differente instances
-        """
-        base1 = Base()
-        base2 = Base()
-        base3 = Base()
+        # Requirement 2: Base() for assigning automatically an ID + 1 of the previous
+        obj2 = Base()
+        self.assertEqual(obj2.id, 2)
 
-        self.assertEqual(base1.id, 1)
-        self.assertEqual(base2.id, 2)
-        self.assertEqual(base3.id, 3)
-    
-    def test_id_generation(self):
-        """Base(89) saving the ID passed"""
-        base1 = Base()
-        base2 = Base(89)
-
-        self.assertEqual(base1.id, 1)
-        self.assertEqual(base2.id, 89)
+    def test_saving_passed_id(self):
+        # Requirement 3: Base(89) saving the ID passed
+        obj3 = Base(89)
+        self.assertEqual(obj3.id, 89)
 
 if __name__ == '__main__':
     unittest.main()
