@@ -39,16 +39,16 @@ class TestRectangle(unittest.TestCase):
     def test_A_entry_wrong_values(self):
         """test to check entry values for a Rectangle
         """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r = Rectangle("1", 2)
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, "2")
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, "3")
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, "4")
         
         with self.assertRaises(ValueError):
