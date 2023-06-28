@@ -33,6 +33,11 @@ class TestBase(unittest.TestCase):
 
         self.assertEqual(base1.id, 1)
         self.assertEqual(base2.id, 89)
+    
+    def test_b5(self):
+        b5 = Base()
+
+        self.assertEqual(None, print(b5))
 
 if __name__ == '__main__':
     unittest.main()
