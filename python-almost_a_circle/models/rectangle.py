@@ -85,3 +85,17 @@ class Rectangle(Base):
         """Define str class"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format
                 (self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        """Define update class, that assigns an argument to each attribute"""
+        num_args = len(args)
+        if num_args > 0:
+            self.id = args[0]
+        elif num_args > 1:
+            self.height = args[1]
+        elif num_args > 2:
+            self.width = args[2]
+        elif num_args > 3:
+            self.x = args[3]
+        elif num_args > 4:
+            self.y = [4]
