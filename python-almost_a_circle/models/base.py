@@ -46,3 +46,30 @@ class Base:
         if json_string == '[]' or json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Function with instance
+        with all attributes already set"""
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        if cls.__name__ == 'Square':
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Function that load the objcets of a CSV file
+        as dictionary, create instances and returns a
+        list of instances"""
+        filename = cls.__name__ + '.json'
+        try:
+            with open(filename, "r") as file:
+                json_str = file.read()
+                dictionaries = cls.from_json_string(json_str)
+                return [cls.create(**dictionary)
+                        for dictionary in dictionaries]
+        except FileNotFoundError:
+            return []
