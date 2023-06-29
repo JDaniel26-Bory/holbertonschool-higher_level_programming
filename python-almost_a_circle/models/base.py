@@ -38,3 +38,11 @@ class Base:
 
         with open(cls.__name__ + ".json", "w", encoding="utf-8") as w:
             w.write(cls.to_json_string(list_cls))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Function that returns the list of
+        the JSON string representation"""
+        if json_string == '[]' or json_string is None:
+            return []
+        return json.loads(json_string)
