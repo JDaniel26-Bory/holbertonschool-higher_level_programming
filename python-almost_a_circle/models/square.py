@@ -22,4 +22,15 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
+        """String representation of a Square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    def update(self, *args, **kwargs):
+        """Define update class, that assigns an argument to each attribute"""
+        attr = ['id', 'size', 'x', 'y']
+        if args and args[0] is not None:
+            for idx in range(len(args)):
+                setattr(self, attr[idx], args[idx])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
