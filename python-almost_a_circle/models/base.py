@@ -37,7 +37,6 @@ class Base:
         with open(filename, "w") as file:
             file.write(json_str)
 
-
     @staticmethod
     def from_json_string(json_string):
         """Function that returns the list of
