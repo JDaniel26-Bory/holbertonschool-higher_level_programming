@@ -1,20 +1,16 @@
 #!/usr/bin/python3
+"""Define City class
 """
-create table city
-"""
+
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from model_state import Base
+from sqlalchemy.ext.declarative import declarative_base
+from model_state import State, Base
 
 
 class City(Base):
-    """table declaration"""
+    """ Define city class with id, name and state_id attributes
+    """
     __tablename__ = 'cities'
-    id = Column(Integer,
-                primary_key=True,
-                autoincrement=True,
-                nullable=False)
-    name = Column(String(128))
-    state_id = Column(Integer,
-                      ForeignKey('states.id'))
-    state = relationship('State')
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
